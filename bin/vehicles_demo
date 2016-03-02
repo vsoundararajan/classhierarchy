@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+require_relative '../lib/allvehicles/vehicles_collection'
+
+a = Allvehicles::Aircraft.new(3, "Lockheed", "Stealth")
+a.weapons?
+puts a.has_weapons
+a.weapons = true
+puts a.has_weapons
+10.times do a.reload! end
+puts "#{a.remaining_ammo} ammo remaining"
+5.times do a.shoot! end
+puts "#{a.remaining_ammo} ammo remaining"
+
