@@ -6,12 +6,14 @@ Gem::Specification.new do |s|
   s.email = "soundararajan@usa.net"
   s.summary = "Vehicle hierarchy"
   s.description = File.read(File.join(File.dirname(__FILE__), "README.md"))
-  s.homepage = "www.nerdvantage.com"
+  s.homepage = "http://www.nerdvantage.com"
+  s.files = Dir["{bin,lib,spec}/**/*"] + %w[LICENSE README.md]
+  s.test_files = Dir["spec/**/*"]
 
 
-  s.executable = ['allvehicles']
-
+  s.executables = ["vehicles_demo"]
+ 
   s.required_ruby_version = '>=1.9'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec', '~> 0'
 
 end

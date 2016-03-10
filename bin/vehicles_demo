@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/allvehicles/vehicles_collection'
+require 'allvehicles/vehicles_collection'
 
 a = Allvehicles::Aircraft.new(3, "Lockheed", "Stealth")
 a.weapons?
@@ -11,3 +11,13 @@ puts "#{a.remaining_ammo} ammo remaining"
 5.times do a.shoot! end
 puts "#{a.remaining_ammo} ammo remaining"
 
+
+
+c = Allvehicles::Car.new(3, "Acura", "MDX")
+puts c.model_num
+puts c.weapons?
+c.weapons = true
+10.times do c.reload! end
+puts c.remaining_ammo
+5.times do c.shoot! end
+puts c.remaining_ammo

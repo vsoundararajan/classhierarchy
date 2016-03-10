@@ -1,0 +1,29 @@
+I have made these classes into a gem named allvehicles.
+To install this gem download this gem file (allvehicles-1.0.0.gem).
+Then from command line issue:
+
+  $ gem install path/to/allvehicles-1.0.0.gem
+
+Once installed from command line run
+  $ vehicles_demo
+
+This runs vehicles_demo.rb file on bin folder
+
+From irb:
+---------
+   require 'allvehicles/car'
+   c = Allvehicles::Car.new(5, "Acura", "Mdx")
+   c.weapons?
+
+   require 'allvehicles/plane'
+   p = Allvehicles::Plane.new(5, "Lockheed Martin", "B52 Bomber")
+   p.has_weapons
+
+   ....
+   ....
+
+*  vehicles_hierarchy_gem.zip is the source for the gem.
+
+*  vehicles_hierarchy.zip is the source for just classes.
+
+
